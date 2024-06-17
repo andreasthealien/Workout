@@ -2,6 +2,16 @@
 const workoutDisplayArea = document.querySelector("#workout-of-the-day-display");
 const menuDaysArr = document.querySelectorAll(".menu-see-workout-day");
 
+const menuOrderArr = [
+    document.querySelector("menu-monday"),
+    document.querySelector("menu-tuesday"),
+    document.querySelector("menu-wednesday"),
+    document.querySelector("menu-thursday"),
+    document.querySelector("menu-friday"),
+    document.querySelector("menu-saturday"),
+    document.querySelector("menu-sunday")
+];
+
 const splittDayTypes = {
     monday: document.querySelector("#splitt-monday-type"),
     tuesday: document.querySelector("#splitt-tuesday-type"),
@@ -119,6 +129,11 @@ const workoutPlan = {
             {
                 exercise: "Shoulder press machine",
                 repRange: "8-12 (failure)",
+                sets: "4"
+            },
+            {
+                exercise: "Single arm preacher curls",
+                repRange: "10-15 (failure left)",
                 sets: "4"
             },
             {
@@ -242,6 +257,17 @@ const workoutPlan = {
 };
 
 // Functions
+const ChangeHighlightedArea = (day) => {
+    let placeInArray;
+    menuOrderArr.forEach((dayElement, i) => {
+        if(dayElement.split("-") === day) {
+            console.log(i);
+            console.log(dayElement);
+        };
+    });
+    const amountOfPixelFromLeft = "";
+};
+
 const ReturnWorkoutHTML = (obj) => {
     if (!(obj.type.toLowerCase() === "rest")) {
         // Making a new table

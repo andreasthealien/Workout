@@ -72,6 +72,7 @@ header {
 }
 
 #menu-see-workout {
+    position: relative;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -84,6 +85,15 @@ header {
     border: 3px rgb(77, 86, 104) solid;
     background: rgb(67, 69, 92);
     background: radial-gradient(circle, rgb(45, 61, 78) 0%, rgb(39, 45, 59) 100%);
+}
+
+#menu-highlight {
+    position: absolute;
+    height: 100%;
+    width: 0;
+    background: rgb(46, 47, 63);
+    background: radial-gradient(circle, rgb(75, 95, 117) 0%, rgb(66, 75, 99) 100%);
+    z-index: 0;
 }
 
 .menu-see-workout-day {
